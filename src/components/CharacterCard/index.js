@@ -7,6 +7,9 @@ function CharacterCard(props) {
       <div className="img-container">
         <img alt={props.id} src={props.image} />
       </div>
+      <span onClick={() => props.removeCharacter(props.id)} className="remove">
+        𝘅
+      </span>
     </div>
   );
 }

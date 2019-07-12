@@ -11,6 +11,14 @@ class App extends Component {
     characters
   };
 
+  removeCharacter = id => {
+    // Filter this.state.friends for friends with an id not equal to the id being removed
+    const characters = this.state.characters.filter(character => character.id !== id);
+    // Set this.state.friends equal to the new friends array
+    this.setState({ characters });
+  };
+
+
   render() {
     return (
       <Wrapper>
