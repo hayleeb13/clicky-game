@@ -1,17 +1,15 @@
 import React from "react";
 import "./style.css";
 
-function CharacterCard(props) {
-  return (
-    <div className="card">
-      <div className="img-container">
-        <img alt={props.id} src={props.image} />
-      </div>
-      <span onClick={() => props.removeCharacter(props.id)} className="remove">
-        𝘅
-      </span>
-    </div>
-  );
-}
-
+const CharacterCard = ({id, image, onClick}) =>
+<div className="card">
+  <div className="img-container">
+  <img
+    src={image}
+    alt={id}
+    id={id}
+    onClick={ () => onClick(id) }
+  />;
+  </div>
+</div>
 export default CharacterCard;

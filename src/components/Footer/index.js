@@ -3,7 +3,7 @@ import "./style.css";
 
 function Footer() {
   return (
-    <footer class="footer"><div class="bottom">Clicky Game!</div></footer>
+    <footer className="footer"><div className="bottom">Clicky Game!</div></footer>
   );
 }
 
