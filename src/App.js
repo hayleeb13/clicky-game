@@ -28,9 +28,14 @@ class App extends Component {
   };
 
   shuffle = array => {
-    for (let i = array.length - 1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
+    let current = array.length;
+    let temp;
+    let random;
+    while (current) {
+      random = Math.floor(Math.random() * current--);
+      temp = array[current];
+      array[current] = array[random];
+      array[random] = temp;
     }
     return array;
   };
