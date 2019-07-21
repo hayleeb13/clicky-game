@@ -1,4 +1,5 @@
 import React from "react";
+import NavMessage from "../NavMessage";
 import "./style.css";
 
 function Nav(props) {
@@ -8,8 +9,10 @@ function Nav(props) {
         <li className="brand">
           <a href="/">Clicky Game</a>
         </li>
-        <li className=""> {props.message} </li>
-        <li>Score: {props.score} | Top Score: {props.topScore}</li>
+        <NavMessage score={props.score} topScore={props.topScore} />
+        <li>
+          Score: {props.score} | Top Score: {props.topScore}
+        </li>
       </ul>
     </nav>
   );
